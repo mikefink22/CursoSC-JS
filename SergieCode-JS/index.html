@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Javascript - Sergie Code</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p>Video del Curso by Sergie Code: <a href="https://www.youtube.com/watch?v=N8Xt5rP_DUo&ab_channel=SergieCode"
+      target="_blank" rel="noopener" rel="noreferrer">JAVASCRIPT desde Cero</a></p>
+
+  <h1>¿Qué puedo hacer con Javascript?</h1>
+  <p id="demostracion">Este texto será transformado por JS</p>
+
+  <button onclick="document.getElementById('demostracion').innerHTML = 'Texto transformado por JS'">Transformar
+    Texto</button>
+
+  <h2>Formas de declarar variables:</h2>
+
+  <ol>
+    <li>var <i>*ya no se usa</i></li>
+    <li>let</li>
+    <li>const</li>
+  </ol>
+
+  <h2>Operadores lógicos:</h2>
+  <img src="operadores.png" alt="operadores lógicos" width="500px">
+
+  <h2>Funciones</h2>
+  <p>Bloques de código reutilizable para realizar tareas específicas.</p>
+
+  <h3>Objetos</h3>
+  <p>Es una estructura de datos formada por pares de clave:valor que puede tener objetos y métodos. Intenta representar
+    algo de la realidad. Están basados en "moldes" llamados clases, que les definen el comportamiento y su estructura.
+  </p>
+
+  <h2>Eventos</h2>
+  <p>Un evento en JS es una acción o suceso que pasa dentro de la página web. Puede ser desencadenado por el usuario al
+    interactuar con la página o por la página por ej. al terminar de cargar cierto contenido.</p>
+  <p id="seleccionable"></p>
+
+  <button onclick="mostrar('seleccionable')">CLICKEAME</button>
+
+
+  <p>Otros eventos, al poner el mouse sobre un elemento (o sacarlo por ejemplo)</p>
+
+  <p id="but2"></p>
+  <button onmouseover="mostrar('but2')">Pone el mouse sobre mí</button>
+
+  <p id="1p">Ejemplo usando el evento "onchange":</p>
+
+  <select id='SelectOnChange' title="select1" onchange="mostrar('1p')">
+    <option value="HTML">HTML</option>
+    <option value="HTML">CSS</option>
+    <option value="HTML">JAVASCRIPT</option>
+    <option value="HTML">REACT</option>
+  </select>
+
+  <p>Más tipos de eventos:</p>
+  <button onclick="enlace()" id="enlace">VER EVENTOS (enlace)</button>
+
+  <h2>STRINGS</h2>
+  <p>Vimos diferentes métodos que se aplican sobre strings, entre otros:</p>
+  <ul>
+    <li>string.slice(i,f)//substring(i,f)--> recorta la palabra entre (caracter inicial y final)</li>
+    <li>string.length --> obtiene la cantidad de caracteres del string</li>
+    <li>string.trim() --> elimina los espacios al inicio/final del string</li>
+    <li>string.toUpperCase()//toLowerCase() --> convierte el string en todo mayúsculas/minúsculas</li>
+    <li>string.concat() --> concatena string con lo que queramos</li>
+    <li>string.charAt(x) --> obtiene el caracter en la posición x que consultamos</li>
+    <li>string.split() --> divide el string de acuerdo al separador que le indiquemos</li>
+  </ul>
+
+  <h2>PROYECTO CALCULADORA</h2>
+  <a href="calculadora/index.html" target="_blank">Ir a la calculadora</a>
+
+  <h2>Arrays (arreglos, listas)</h2>
+  <p>Es una estructura de datos que nos permite almacenar varios elementos en una sola variable.</p>
+  <p>Podemos pensar en esto como una lista ordenada de elementos en la cual cada uno de ellos tiene un índice que indica
+    su posición en la lista.</p>
+  <p>Podemos almacenar cualquier tipo de datos.</p>
+  <p>A diferencia de otros lenguajes de programación, el largo del array no está definido de antemano, es dinámico.</p>
+  <p id="seleccionable1" onmouseout="insertarArray()"><b>Posicionar mouse y retirarlo para transformar este párrafo en
+      un Array</b></p>
+
+  <p><b>Operaciones y métodos sobre arrays:</b></p>
+  <img src="javascripArrays.png" alt="Métodos sobre Arrays">
+  <ul>
+    <li>array.length --> Es la cantidad de elementos del array</li>
+    <li>arrayNumeros.sort() --> Sobrescribe el array original, ordenando los números de menor a mayor.</li>
+    <li>arrayLetras.sort() --> Sobrescribe, ordena alfabéticamente.</li>
+    <li>array[array.length-1] --> Accedo al último elemento del array.</li>
+    <li onclick="insertarLi()"><b>Hacer click para traer el array en forma de lista (usando un bucle for):</b>
+      <ul id="seleccionable3">
+      </ul>
+    </li>
+    <li>array.push(elem) o array[array.length]= elem --> Agregaría un nuevo elemento al array</li>
+    <li>array.map(nar,manz) --> Transforma mi array de naranjas a manzanas.</li>
+    <li>array.shift() --> Elimina el primer elem. del array y devuelve un nuevo array.</li>
+    <li>array.splice(x,y,'a','b',) --> Inserta en la posición x los elem. 'a','b', etc, eliminando y elementos desde el
+      índice x</li>
+    <li>array.slice(x,y) --> No modifica el array, pero lo corta entre los índices x,y</li>
+  </ul>
+  <p><u>Aclaración:</u></p>
+  <p><i>Sobre el declarar los arrays como "const" ya que no se pueden redeclarar. Por lo que se recomienda usar
+      <b>let</b> para declararlos.</i></p>
+
+  <h2>FECHAS (Tipo de dato DATE)</h2>
+  <p>Tener cuidado con los meses! Es un array que comienza en el mes 0-->Enero.</p>
+
+  <h2>MATH</h2>
+  <p>Javascript trae constantes y funciones predefinidas para realizar operaciones matemáticas, por ejemplo:</p>
+  <img src="jsMath.png" alt="constantes Matemáticas">
+  <p>Con respecto al redondeo, tenemos 4 formas:</p>
+  <ol>
+    <li>Math.round(numero)--> al entero más cercano</li>
+    <li>Math.ceil() --> redondea hacia arriba</li>
+    <li>Math.floor() --> redondea hacia abajo</li>
+    <li>Math.trunc() --> trunca el decimal</li>
+  </ol>
+
+  <p>Método Math.round(Math.ramdom()*100) --> Redondea un número entre 0 y 100</p>
+  <p></p>
+
+  <h2>CONDICIONALES - If / Else / Switch</h2>
+  <p>Es una estructura de control que te permite ejecutar distintos bloques de código dependiendo de una condición
+    específica.</p>
+  <p>Permite tener cierto comportamiento dependiendo si la condición es verdadera o falsa.</p>
+
+  <p>Ejemplo bloque switch:</p>
+  <p><b>Recomendación de Música:</b></p>
+
+  <label for="estiloDeMusica" id="pruebaSwitch">Ingresa que estilo de Música quieres escuchar:</label>
+
+  <input title='inputEstiloMusica' type="text" id="estiloDeMusica">
+
+  <button onclick="redirigir()" title="botonEstiloMusica">Buscar Música Elegida</button>
+
+  <p>Link a la música elegida: <span id="Recomendación"></span>Opciones: rock, pop, heavy metal, punk</p>
+
+  <p>Ejemplo de <b>IF ANIDADOS</b></p>
+
+  <p>Haremos una verificación de si puede viajar de acuerdo a su edad, nacionalidad y si tiene pasaporte:</p>
+
+  <button type="button" id="verificacion" onclick="puedeViajar()">Compruebe si puede viajar</button>
+
+  <p id="tramite1">Esperando datos...</p>
+  <p id="tramite2"></p>
+  <p id="puedeViajar"></p>
+
+  <h2>PROYECTO 2: JUEGO ADIVINANZA</h2>
+  <a href="juegoAdivinanza/index.html" target="_blank">Ir al Juego</a>
+
+  <br>
+  <div>
+    <a href="https://youtu.be/N8Xt5rP_DUo?list=PL4i6DAJxGfdwqTWcRlNpEwaoFl7-UVsnS&t=12284">Continuar video - DATE</a>
+  </div>
+
+  <script src="script.js"></script>
+
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+</body>
+
+</html>

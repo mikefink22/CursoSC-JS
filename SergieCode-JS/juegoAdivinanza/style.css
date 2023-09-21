@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    background-color: cadetblue;
+  }
+  
+  h1 {
+    color: #8f4646;
+    font-family: Arial, sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: #231f1f;
+  }
+  
+  input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: #4c61af;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #mensaje {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
