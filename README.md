@@ -6,5 +6,8 @@ JavaScript es un lenguaje de programación multipropósito el cual sirve, no sol
 Página del curso:
 https://www.youtube.com/watch?v=N8Xt5rP_DUo&list=PL4i6DAJxGfdwqTWcRlNpEwaoFl7-UVsnS&t=12284s&ab_channel=SergieCode
 
+Muestra de la página realizada siguiendo el curso:
+https://mikefink22.github.io/CursoSC-JS/
+
 
 
